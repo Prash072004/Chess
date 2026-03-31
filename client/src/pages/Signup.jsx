@@ -23,7 +23,11 @@ function Signup() {
             return;
         }
 
-        axios.post('', { username, email, password })
+        axios.post("http://localhost:5000/api/auth/signup", {
+            username: form.username,
+            email: form.email,
+            password: form.password
+        })
             .then(result => console.log(result))
             .catch(err => console.log(err));
         /* Pro Tip
